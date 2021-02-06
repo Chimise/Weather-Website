@@ -1,5 +1,3 @@
-console.log('Client side javascript is loaded')
-
 const form = document.querySelector('#my-form');
 const inputAddress = document.querySelector('#address-input');
 const error = document.querySelector('#error');
