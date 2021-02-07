@@ -5,9 +5,10 @@ const address = document.querySelector('#address');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const inputValue = inputAddress.value;
-    error.innerHTML = 'Loading...'
+    error.innerHTML = 'Loading...';
+    address.innerHTML = '';
 
-    fetch('http://localhost:3000/weather?address=' + inputValue).then(response => response.json()).then((data) => {
+    fetch('/weather?address=' + inputValue).then(response => response.json()).then((data) => {
 
         error.innerHTML = '';
         address.innerHTML = '';
